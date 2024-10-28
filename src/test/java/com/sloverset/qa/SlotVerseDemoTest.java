@@ -43,7 +43,13 @@ public class SlotVerseDemoTest extends AbstractTest {
         freedomStarsPopUp.clickBet50KButton();
         var gameScreen = initPage(GameScreenBase.class);
         gameScreen.waitForLoadingScreenToComplete();
+        gameScreen.clickStartBtn();
         assertTrue(gameScreen.isGameScreenOpened(), "Game screen was not opened");
+        gameScreen.clickSpinBtn();
+        gameScreen.waitForSpinToFinish();
+        gameScreen.clickHomeBtn();
+        popUp.clickPurpleCloseBtn();
+        assertTrue(homeScreen.isScreenOpened(), "Home screen is not opened");
     }
 
 
