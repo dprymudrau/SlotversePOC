@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 @DeviceType(pageType = DeviceType.Type.IOS_PHONE, parentClass = StartScreenBase.class)
 public class StartScreen extends StartScreenBase {
 
-    protected StartScreen(WebDriver driver) {
+    public StartScreen(WebDriver driver) {
         super(driver);
     }
 }
